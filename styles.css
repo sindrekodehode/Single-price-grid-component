@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+/* Reset and card placement */
+
+body {
+  margin: none;
+  padding: none;
+  background-color: lightgray;
+  display: grid;
+  place-items: center;
+  color: whitesmoke;
+}
+
+/* Card Layout */
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "top top"
+    "bot-l bot-r";
+  grid-template-columns: 1fr 1fr;
+  max-width: 60%;
+  border-radius: 7px;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  overflow: hidden;
+}
+
+.top-container {
+  grid-area: top;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  background-color: whitesmoke;
+  color: hsl(218, 22%, 67%);
+}
+
+.b-left-container {
+  grid-area: bot-l;
+  padding: 30px;
+  background-color: hsl(179, 62%, 43%);
+}
+.offer-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.b-right-container {
+  grid-area: bot-r;
+  padding: 30px;
+  background-color: hsl(179, 62%, 50%);
+}
+
+/* Text Styling */
+
+h1 {
+  color: hsl(179, 62%, 43%);
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.top-container h2 {
+  color: gold;
+  padding: 0;
+  margin: 10px 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.offer {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.offer-duration {
+  color: hsl(204, 43%, 93%);
+  margin: 0 0 0 10px;
+}
+
+ul {
+  display: inline;
+  font-size: 0;
+  list-style: none;
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-size: 14px;
+  color: hsl(204, 43%, 93%);
+}
+
+/* Button styling */
+
+.sign-up-btn {
+  background-color: rgb(153, 235, 46);
+  padding: 8px 14px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.sign-up-btn:hover,
+.sign-up-btn:active {
+  background-color: gold;
+  cursor: pointer;
+}
+
+.sign-up-btn:hover a,
+.sign-up-btn:active a {
+  color: navy;
+}
+
+/* Signature styling */
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  color: navy;
+}
+
+/* For Phone Usage */
+@media (max-width: 375px) {
+  .grid-container {
+    grid-template-areas:
+      "top top"
+      "bot-l bot-l"
+      "bot-r bot-r";
+    max-width: 90%;
+  }
+}
