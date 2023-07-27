@@ -12,6 +12,7 @@ body {
   display: grid;
   place-items: center;
   color: whitesmoke;
+  min-height: 100svh;
 }
 
 /* Card Layout */
